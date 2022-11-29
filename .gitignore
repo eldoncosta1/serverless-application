@@ -1,0 +1,4 @@
+credentials.csv
+.vscode/*
+node_modules
+coverage
