@@ -7,7 +7,7 @@
     "start": "npx nodemon --exec npm run offline",
     "offline": "npx sls offline start --host 0.0.0.0",
     "test": "IS_OFFLINE=true npx jest --collect-coverage",
-    "test:watch": "IS_OFFLINE=true npx jest --watch"
+    "test:watch": "IS_OFFLINE=true npx jest --watchAll"
   },
   "keywords": [],
   "author": "",

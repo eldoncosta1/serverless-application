@@ -1,0 +1,12 @@
+
+/** 
+Para gerar a aplicação dentro do container o wsl estava acusando erro de permissão de escrita ao diretorio de logs do /root/.npm
+para resolver essa problemática foi executado o comando para deixar o diretório do projeto como ususário root
+*/
+sudo chown -R root .
+
+/**
+Verificar serviços disponiveis no container contendo localstack
+*/
+
+curl localhost:4566/health | jq

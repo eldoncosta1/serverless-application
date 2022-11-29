@@ -7,12 +7,13 @@ const s3Config = {
 const isLocal = process.env.IS_OFFLINE
 
 if (isLocal) {
-  AWS.config.update({
-    credentials: {
-      accessKeyId: 'test',
-      secretAccessKey: 'test'
-    }
-  })
+  // não precisamos fazer isso, quando as variavies estao setadas no compose
+  // AWS.config.update({
+  //   credentials: {
+  //     accessKeyId: 'test',
+  //     secretAccessKey: 'test'
+  //   }
+  // })
   const host = process.env.LOCALSTACK_HOST || "localhost"
   s3Config.endpoint = new AWS.Endpoint(`http://${host}:4566`)
 }
