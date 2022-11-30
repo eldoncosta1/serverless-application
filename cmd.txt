@@ -10,3 +10,7 @@ Verificar serviços disponiveis no container contendo localstack
 */
 
 curl localhost:4566/health | jq
+
+/** listar tabelas dynamodb no localstack */
+aws --endpoint-url http://localhost:4566 dynamodb list-tables
+aws dynamodb scan --table-name my_table --endpoint-url http://localhost:my_port

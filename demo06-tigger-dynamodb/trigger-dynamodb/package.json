@@ -1,0 +1,23 @@
+{
+  "name": "trigger-dynamodb",
+  "version": "1.0.0",
+  "description": "invocando lambda local com serverless-offline:",
+  "main": "handler.js",
+  "scripts": {
+    "start": "npx nodemon --exec npm run offline",
+    "offline": "npx sls offline start --host 0.0.0.0",
+    "invoke-local": "sls invoke local -f hero-insert --path requests-mock/hero.insert.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "serverless": "^3.25.1",
+    "serverless-offline": "9.2"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1"
+  }
+}
